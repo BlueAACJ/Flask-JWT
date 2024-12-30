@@ -1,0 +1,9 @@
+{
+    "RUTA sin Paramtros": 89,
+    "id": 1,
+    "nombre": "Juan Pérez",
+    "email": "juan.perez@example.com",
+    "activo": true,
+    "roles": ["admin", "editor"]
+  }
+  

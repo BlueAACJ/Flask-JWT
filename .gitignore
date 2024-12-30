@@ -1,0 +1,64 @@
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches
+*.pyo
+*.pyd
+*.swp
+*.swo
+
+# Editor folders
+.vscode/
+.idea/
+
+# Virtual environments
+env/
+venv/
+ENV/
+.venv/
+.env
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# PyInstaller
+#  Typically stores temporary files in the build/ folder and a bundled app in the dist/ folder
+*.spec
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Python coverage reports
+.coverage
+.coverage.*
+nosetests.xml
+pytest.xml
+*.cover
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+media/
+
+# Flask instance folder
+instance/
+
+# Pytest cache
+.cache/
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# mypy
+.mypy_cache/
+
+# pyenv
+.python-version

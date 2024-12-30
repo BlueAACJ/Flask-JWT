@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obtener Registro</title>
+</head>
+<body>
+    <h1>Obtener Registro</h1>
+    <label for="registro_id">ID del registro:</label>
+    <input type="number" id="registro_id" value="5">
+    <button onclick="obtenerRegistro()">Obtener Datos</button>
+    <pre id="resultado"></pre>
+
+    <script>
+        function obtenerRegistro() {
+            const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMjgwNjcxOCwianRpIjoiZmRjNDU5M2ItNDVkNS00NGZiLWI2MjMtZTdkY2FhZTI3ODc5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkhvbGEgbXVuZG8iLCJuYmYiOjE3MzI4MDY3MTgsImNzcmYiOiIwZTBjOGM4Mi0yZDY3LTRjNjUtYTg1ZC00N2QyYmY4N2JjYWYifQ.W4voKxcb4CEt8Faeptqm8aIlMZEBBQHJeuLWyt9SRrU'; // Tu token
+
+            // Obtener el ID del registro desde el input
+            const id_register = document.getElementById('registro_id').value;
+
+            // Hacer la solicitud GET con el ID en la URL
+            fetch(`http://127.0.0.1:5000/api/Aldeas/${id_register}`, {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`, // Añadir el token en el encabezado
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data); // Mostrar los datos en la consola
+                document.getElementById('resultado').textContent = JSON.stringify(data, null, 2); // Mostrar los datos en la página
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('resultado').textContent = 'Error al obtener los datos.';
+            });
+        }
+    </script>
+</body>
+</html>

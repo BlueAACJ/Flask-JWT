@@ -1,0 +1,22 @@
+{
+  "RUTA con Paramtros": 100,
+    "pedido_id": 101,
+    "cliente": {
+      "nombre": "Ana López",
+      "telefono": "555-1234"
+    },
+    "productos": [
+      {
+        "nombre": "Laptop",
+        "cantidad": 1,
+        "precio": 1200.50
+      },
+      {
+        "nombre": "Mouse",
+        "cantidad": 2,
+        "precio": 25.75
+      }
+    ],
+    "total": 1252.00
+  }
+  
